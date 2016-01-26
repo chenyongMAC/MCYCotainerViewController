@@ -53,6 +53,7 @@
 		9ADCE3B51C4FDD79009D92E3 /* ResourceTwitter.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 9ADCE3A71C4FDD79009D92E3 /* ResourceTwitter.bundle */; settings = {ASSET_TAGS = (); }; };
 		9ADCE3B61C4FDD79009D92E3 /* wall-e@2x.webp in Resources */ = {isa = PBXBuildFile; fileRef = 9ADCE3A81C4FDD79009D92E3 /* wall-e@2x.webp */; settings = {ASSET_TAGS = (); }; };
 		9ADCE3B91C4FE00C009D92E3 /* YYImageDisplayExample.m in Sources */ = {isa = PBXBuildFile; fileRef = 9ADCE3B81C4FE00C009D92E3 /* YYImageDisplayExample.m */; settings = {ASSET_TAGS = (); }; };
+		9AE0ACCD1C57C27F009622B1 /* YYImageProgressiveExample.m in Sources */ = {isa = PBXBuildFile; fileRef = 9AE0ACCC1C57C27F009622B1 /* YYImageProgressiveExample.m */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -143,6 +144,8 @@
 		9ADCE3A81C4FDD79009D92E3 /* wall-e@2x.webp */ = {isa = PBXFileReference; lastKnownFileType = file; name = "wall-e@2x.webp"; path = "Resources/wall-e@2x.webp"; sourceTree = "<group>"; };
 		9ADCE3B71C4FE00C009D92E3 /* YYImageDisplayExample.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = YYImageDisplayExample.h; path = Src/ViewControllers/YYImage/YYImageDisplayExample.h; sourceTree = "<group>"; };
 		9ADCE3B81C4FE00C009D92E3 /* YYImageDisplayExample.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = YYImageDisplayExample.m; path = Src/ViewControllers/YYImage/YYImageDisplayExample.m; sourceTree = "<group>"; };
+		9AE0ACCB1C57C27F009622B1 /* YYImageProgressiveExample.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = YYImageProgressiveExample.h; path = Src/ViewControllers/YYImage/YYImageProgressiveExample.h; sourceTree = "<group>"; };
+		9AE0ACCC1C57C27F009622B1 /* YYImageProgressiveExample.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = YYImageProgressiveExample.m; path = Src/ViewControllers/YYImage/YYImageProgressiveExample.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -317,6 +320,8 @@
 				9ADCE3B81C4FE00C009D92E3 /* YYImageDisplayExample.m */,
 				9AB0BADF1C51254800F078AB /* YYImageExampleHelper.h */,
 				9AB0BAE01C51254800F078AB /* YYImageExampleHelper.m */,
+				9AE0ACCB1C57C27F009622B1 /* YYImageProgressiveExample.h */,
+				9AE0ACCC1C57C27F009622B1 /* YYImageProgressiveExample.m */,
 			);
 			name = YYImageCY;
 			sourceTree = "<group>";
@@ -566,6 +571,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9AE0ACCD1C57C27F009622B1 /* YYImageProgressiveExample.m in Sources */,
 				9A1284AF1C4D3F2C001C5C88 /* ViewController.m in Sources */,
 				9ADCE3841C4FABD0009D92E3 /* BaseViewController.m in Sources */,
 				9ADCE3991C4FD846009D92E3 /* UIView+YYAdd.m in Sources */,
