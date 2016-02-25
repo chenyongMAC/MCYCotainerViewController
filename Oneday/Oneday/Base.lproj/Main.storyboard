@@ -24,9 +24,12 @@
                                     <constraint firstAttribute="height" constant="40" id="j3j-Pc-xdt"/>
                                 </constraints>
                             </view>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nkJ-Ul-CeF">
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" pagingEnabled="YES" translatesAutoresizingMaskIntoConstraints="NO" id="nkJ-Ul-CeF">
                                 <rect key="frame" x="0.0" y="104" width="320" height="464"/>
                                 <color key="backgroundColor" red="0.078431372550000003" green="0.62745098040000002" blue="0.62745098040000002" alpha="0.94865301719999995" colorSpace="calibratedRGB"/>
+                                <connections>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="81V-cX-VdQ"/>
+                                </connections>
                             </scrollView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
@@ -43,6 +46,7 @@
                     <navigationItem key="navigationItem" title="Menu" id="tUc-hF-FhW"/>
                     <connections>
                         <outlet property="menuView" destination="zFu-rF-flg" id="tFv-vr-ug8"/>
+                        <outlet property="scrollView" destination="nkJ-Ul-CeF" id="Z3z-LD-opd"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
