@@ -34,8 +34,7 @@ class ContainerViewController: UIViewController {
     scrollView.frame.size = CGSize(width: view.frame.width, height: view.frame.width - 60)
     scrollView.contentSize = CGSize(width: scrollView.frame.width * 3, height: scrollView.frame.height)
     
-    setupMenuViewWithTitles(["mainVC", "mainTabVC", "YYImageDemo"])
-    setupViewControllers()
+    initailViewControllersInStoryboard(storyboard!)
   }
 
 }
@@ -43,7 +42,7 @@ class ContainerViewController: UIViewController {
 // MARK: - menu view configure
 extension ContainerViewController {
   
-  func setupMenuViewWithTitles(titles: [String]) {
+  private func setupMenuViewWithTitles(titles: [String]) {
     var widthOfLabels: CGFloat = 0.0
     var labels = [UILabel]()
     for title in titles {
@@ -59,7 +58,7 @@ extension ContainerViewController {
     configureLabelsInMenuView(menuView, withLabelsWidth: widthOfLabels)
   }
   
-  func configureLabelsInMenuView(menuView: UIView, withLabelsWidth labelsWidth: CGFloat) {
+  private func configureLabelsInMenuView(menuView: UIView, withLabelsWidth labelsWidth: CGFloat) {
     guard let labels = menuView.subviews as? [UILabel] else{ return }
     var nextPositonOfLabels = (menuView.bounds.width - labelsWidth) / 2
     for (index, label) in labels.enumerate() {
@@ -80,13 +79,13 @@ extension ContainerViewController {
   func menuItemClicked(recognizer: UITapGestureRecognizer) {
     guard let sender = recognizer.view as? UILabel else { return }
     let selectedIndex = sender.tag - 2000
-    UIView.animateWithDuration(0.5, animations: { () -> Void in
+    UIView.animateWithDuration(0.5, animations: {
       self.scrollView.contentOffset.x = CGFloat(selectedIndex) * self.scrollView.frame.width
       self.updateMenuWithSelectedIndex(selectedIndex)
       }, completion: nil)
   }
   
-  func updateMenuWithSelectedIndex(selectedIndex: Int) {
+  private func updateMenuWithSelectedIndex(selectedIndex: Int) {
     guard let labels = menuView.subviews as? [UILabel] else { return }
     for (index, label) in labels.enumerate() {
       if selectedIndex == index {
@@ -99,22 +98,22 @@ extension ContainerViewController {
   
 }
 
-// Children View Controllers
+// MARK: - Children View Controllers
 extension ContainerViewController {
-
-  func setupViewControllers() {
-    let viewControllers = [UIViewController(), UIViewController(), UIViewController()]
+  
+  func initailViewControllersInStoryboard(storyboard: UIStoryboard) {
+    let mainVC = storyboard.instantiateViewControllerWithIdentifier("MainVC")
+    let mainTabVC = storyboard.instantiateViewControllerWithIdentifier("MainTabVC") as! UITableViewController
+    let rightVC = storyboard.instantiateViewControllerWithIdentifier("RightVC")
+    setupMenuViewWithTitles([mainVC.title!, mainTabVC.title!,rightVC.title!])
+    setupViewsWidthViewControllers([mainVC, mainTabVC, rightVC])
+  }
+  
+  private func setupViewsWidthViewControllers(viewControllers: [UIViewController]) {
     let scrollViewBounds = scrollView.bounds
-    // fake view controller
     for (index, viewController) in viewControllers.enumerate() {
       let view = viewController.view
       view.frame = CGRect(origin: CGPoint(x: CGFloat(index) * scrollViewBounds.width, y: 0), size: scrollViewBounds.size)
-      switch index {
-      case 0: view.backgroundColor = UIColor.redColor()
-      case 1: view.backgroundColor = UIColor.yellowColor()
-      case 2: view.backgroundColor = UIColor.blueColor()
-      default: break
-      }
       scrollView.addSubview(viewController.view)
     }
   }
