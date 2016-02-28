@@ -56,6 +56,8 @@
 		9ADCE3B61C4FDD79009D92E3 /* wall-e@2x.webp in Resources */ = {isa = PBXBuildFile; fileRef = 9ADCE3A81C4FDD79009D92E3 /* wall-e@2x.webp */; settings = {ASSET_TAGS = (); }; };
 		9ADCE3B91C4FE00C009D92E3 /* YYImageDisplayExample.m in Sources */ = {isa = PBXBuildFile; fileRef = 9ADCE3B81C4FE00C009D92E3 /* YYImageDisplayExample.m */; settings = {ASSET_TAGS = (); }; };
 		9AE0ACCD1C57C27F009622B1 /* YYImageProgressiveExample.m in Sources */ = {isa = PBXBuildFile; fileRef = 9AE0ACCC1C57C27F009622B1 /* YYImageProgressiveExample.m */; settings = {ASSET_TAGS = (); }; };
+		9AFD3A361C832E7D005F7FD8 /* TintColorViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9AFD3A341C832E7D005F7FD8 /* TintColorViewController.m */; settings = {ASSET_TAGS = (); }; };
+		9AFD3A371C832E7D005F7FD8 /* TintColorViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9AFD3A351C832E7D005F7FD8 /* TintColorViewController.xib */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -151,6 +153,9 @@
 		9ADCE3B81C4FE00C009D92E3 /* YYImageDisplayExample.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = YYImageDisplayExample.m; path = Src/ViewControllers/YYImage/YYImageDisplayExample.m; sourceTree = "<group>"; };
 		9AE0ACCB1C57C27F009622B1 /* YYImageProgressiveExample.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = YYImageProgressiveExample.h; path = Src/ViewControllers/YYImage/YYImageProgressiveExample.h; sourceTree = "<group>"; };
 		9AE0ACCC1C57C27F009622B1 /* YYImageProgressiveExample.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = YYImageProgressiveExample.m; path = Src/ViewControllers/YYImage/YYImageProgressiveExample.m; sourceTree = "<group>"; };
+		9AFD3A331C832E7D005F7FD8 /* TintColorViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TintColorViewController.h; path = Src/ViewControllers/BackgroundFetch/TintColorViewController.h; sourceTree = "<group>"; };
+		9AFD3A341C832E7D005F7FD8 /* TintColorViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TintColorViewController.m; path = Src/ViewControllers/BackgroundFetch/TintColorViewController.m; sourceTree = "<group>"; };
+		9AFD3A351C832E7D005F7FD8 /* TintColorViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = TintColorViewController.xib; path = Src/ViewControllers/BackgroundFetch/TintColorViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -274,6 +279,7 @@
 				9ADCE3741C4F9D36009D92E3 /* MainTableViewController.h */,
 				9ADCE3751C4F9D36009D92E3 /* MainTableViewController.m */,
 				9ADCE3761C4F9D36009D92E3 /* MainTableViewController.xib */,
+				9AFD3A321C832E43005F7FD8 /* tintColor */,
 				9A547A561C8094DC0064396F /* BackgroundSession */,
 			);
 			name = mainTableView;
@@ -377,6 +383,16 @@
 				9ADCE3A81C4FDD79009D92E3 /* wall-e@2x.webp */,
 			);
 			name = Resources;
+			sourceTree = "<group>";
+		};
+		9AFD3A321C832E43005F7FD8 /* tintColor */ = {
+			isa = PBXGroup;
+			children = (
+				9AFD3A331C832E7D005F7FD8 /* TintColorViewController.h */,
+				9AFD3A341C832E7D005F7FD8 /* TintColorViewController.m */,
+				9AFD3A351C832E7D005F7FD8 /* TintColorViewController.xib */,
+			);
+			name = tintColor;
 			sourceTree = "<group>";
 		};
 		9E306997B660444BA6EF4E50 /* Pods */ = {
@@ -530,6 +546,7 @@
 				9ADCE3731C4F9D1C009D92E3 /* MainViewController.xib in Resources */,
 				9ADCE3AF1C4FDD79009D92E3 /* mew_interlaced.gif in Resources */,
 				9ADCE3AD1C4FDD79009D92E3 /* mew_baseline.jpg in Resources */,
+				9AFD3A371C832E7D005F7FD8 /* TintColorViewController.xib in Resources */,
 				9ADCE3A91C4FDD79009D92E3 /* cube@2x.png in Resources */,
 				9ADCE3B31C4FDD79009D92E3 /* nyancat@2x.webp in Resources */,
 			);
@@ -605,6 +622,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9AE0ACCD1C57C27F009622B1 /* YYImageProgressiveExample.m in Sources */,
+				9AFD3A361C832E7D005F7FD8 /* TintColorViewController.m in Sources */,
 				9A1284AF1C4D3F2C001C5C88 /* ViewController.m in Sources */,
 				9ADCE3841C4FABD0009D92E3 /* BaseViewController.m in Sources */,
 				9A547A5A1C8095390064396F /* BackgroundViewController.m in Sources */,

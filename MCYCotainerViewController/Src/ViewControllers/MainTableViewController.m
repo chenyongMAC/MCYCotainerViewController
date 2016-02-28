@@ -25,6 +25,7 @@
     self.tableView.backgroundColor = [UIColor lightGrayColor];
     
     [self addCell:@"BackgroundSession" class:@"BackgroundViewController"];
+    [self addCell:@"TintColor" class:@"TintColorViewController"];
     
     [self.tableView reloadData];
 }
