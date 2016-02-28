@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		589922E01C82B78400BAEFF2 /* BackgroundSessionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 589922DF1C82B78400BAEFF2 /* BackgroundSessionViewController.swift */; };
 		58B34E6D1C7EE5DA00298ECE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58B34E6C1C7EE5DA00298ECE /* AppDelegate.swift */; };
 		58B34E6F1C7EE5DA00298ECE /* ContainerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58B34E6E1C7EE5DA00298ECE /* ContainerViewController.swift */; };
 		58B34E721C7EE5DA00298ECE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 58B34E701C7EE5DA00298ECE /* Main.storyboard */; };
@@ -15,6 +16,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		589922DF1C82B78400BAEFF2 /* BackgroundSessionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BackgroundSessionViewController.swift; sourceTree = "<group>"; };
 		58B34E691C7EE5DA00298ECE /* Oneday.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Oneday.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		58B34E6C1C7EE5DA00298ECE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		58B34E6E1C7EE5DA00298ECE /* ContainerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContainerViewController.swift; sourceTree = "<group>"; };
@@ -56,6 +58,7 @@
 			children = (
 				58B34E6C1C7EE5DA00298ECE /* AppDelegate.swift */,
 				58B34E6E1C7EE5DA00298ECE /* ContainerViewController.swift */,
+				589922DF1C82B78400BAEFF2 /* BackgroundSessionViewController.swift */,
 				58B34E701C7EE5DA00298ECE /* Main.storyboard */,
 				58B34E731C7EE5DA00298ECE /* Assets.xcassets */,
 				58B34E751C7EE5DA00298ECE /* LaunchScreen.storyboard */,
@@ -96,6 +99,11 @@
 				TargetAttributes = {
 					58B34E681C7EE5DA00298ECE = {
 						CreatedOnToolsVersion = 7.2.1;
+						SystemCapabilities = {
+							com.apple.BackgroundModes = {
+								enabled = 0;
+							};
+						};
 					};
 				};
 			};
@@ -137,6 +145,7 @@
 			files = (
 				58B34E6F1C7EE5DA00298ECE /* ContainerViewController.swift in Sources */,
 				58B34E6D1C7EE5DA00298ECE /* AppDelegate.swift in Sources */,
+				589922E01C82B78400BAEFF2 /* BackgroundSessionViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -106,21 +106,27 @@ extension ContainerViewController {
     let mainTabVC = storyboard.instantiateViewControllerWithIdentifier("MainTabVC") as! UITableViewController
     let rightVC = storyboard.instantiateViewControllerWithIdentifier("RightVC")
     setupMenuViewWithTitles([mainVC.title!, mainTabVC.title!,rightVC.title!])
-    setupViewsWidthViewControllers([mainVC, mainTabVC, rightVC])
+    setupChildViewControllers([mainVC, mainTabVC, rightVC])
   }
   
-  private func setupViewsWidthViewControllers(viewControllers: [UIViewController]) {
+  private func setupChildViewControllers(viewControllers: [UIViewController]) {
     let scrollViewBounds = scrollView.bounds
     for (index, viewController) in viewControllers.enumerate() {
+      // add child view
       let view = viewController.view
       view.frame = CGRect(origin: CGPoint(x: CGFloat(index) * scrollViewBounds.width, y: 0), size: scrollViewBounds.size)
       scrollView.addSubview(viewController.view)
+      
+      // add child view controller
+      viewController.willMoveToParentViewController(self)
+      self.addChildViewController(viewController)
+      viewController.didMoveToParentViewController(self)
     }
   }
   
 }
 
-// Scroll view delegate
+// MARK: - Scroll view delegate
 extension ContainerViewController: UIScrollViewDelegate {
   
   func scrollViewDidScroll(scrollView: UIScrollView) {
@@ -128,4 +134,6 @@ extension ContainerViewController: UIScrollViewDelegate {
   }
   
 }
+
+
 
