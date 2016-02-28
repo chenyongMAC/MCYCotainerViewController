@@ -23,7 +23,6 @@ class BackgroundSessionViewController: UIViewController {
   @IBOutlet weak var cancelAllTaskButton: UIButton!
   @IBOutlet weak var resumableTaskButton: UIButton!
   
-  var downloadTask: NSURLSessionDownloadTask?
   lazy var currentSession: NSURLSession = {
     let sessionConfigure = NSURLSessionConfiguration.defaultSessionConfiguration()
     return NSURLSession(configuration: sessionConfigure, delegate: self, delegateQueue: NSOperationQueue.mainQueue())
@@ -50,23 +49,12 @@ class BackgroundSessionViewController: UIViewController {
     }
   }
   
-  @IBAction func startBgDownloadTask(sender: UIButton) {
-    guard let url = NSURL(string: "http://imgsrc.baidu.com/forum/pic/item/493e384e251f95ca53a2f639c9177f3e6609529a.jpg") else {
-      print("URL error")
-      return
-    }
-    let request = NSURLRequest(URL: url)
-    downloadTask = currentSession.downloadTaskWithRequest(request)
-    downloadTask!.resume()
-  }
-  
 }
 
 // MARK: - NSURLSession delegate
 extension BackgroundSessionViewController: NSURLSessionDownloadDelegate {
   
   func URLSession(session: NSURLSession, downloadTask: NSURLSessionDownloadTask, didWriteData bytesWritten: Int64, totalBytesWritten: Int64, totalBytesExpectedToWrite: Int64) {
-    print("hehe")
     self.progressView.progress = Float(totalBytesWritten) / Float(totalBytesExpectedToWrite)
   }
   
