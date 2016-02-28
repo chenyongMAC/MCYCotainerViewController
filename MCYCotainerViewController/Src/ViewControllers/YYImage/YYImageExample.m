@@ -85,6 +85,7 @@
 }
 
 #pragma mark selector
+#pragma mark 长按cell，可以交换cell位置
 - (void)longPressGesture:(id)sender {
     
     UILongPressGestureRecognizer *longPress = (UILongPressGestureRecognizer *)sender;

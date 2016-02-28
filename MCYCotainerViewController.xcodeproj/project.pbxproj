@@ -18,6 +18,8 @@
 		9A1284CD1C4D3F2C001C5C88 /* MCYCotainerViewControllerUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A1284CC1C4D3F2C001C5C88 /* MCYCotainerViewControllerUITests.m */; };
 		9A1284DD1C4D3FAA001C5C88 /* MCYContainerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A1284DC1C4D3FAA001C5C88 /* MCYContainerViewController.m */; settings = {ASSET_TAGS = (); }; };
 		9A1284E01C4D3FD0001C5C88 /* MCYScrollMenuView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A1284DF1C4D3FD0001C5C88 /* MCYScrollMenuView.m */; settings = {ASSET_TAGS = (); }; };
+		9A547A5A1C8095390064396F /* BackgroundViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A547A581C8095390064396F /* BackgroundViewController.m */; settings = {ASSET_TAGS = (); }; };
+		9A547A5B1C8095390064396F /* BackgroundViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9A547A591C8095390064396F /* BackgroundViewController.xib */; settings = {ASSET_TAGS = (); }; };
 		9A9328D81C55C0CD006BBE19 /* UIControl+YYadd.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A9328D71C55C0CD006BBE19 /* UIControl+YYadd.m */; settings = {ASSET_TAGS = (); }; };
 		9AB0BAE11C51254800F078AB /* YYImageExampleHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 9AB0BAE01C51254800F078AB /* YYImageExampleHelper.m */; settings = {ASSET_TAGS = (); }; };
 		9AB0BAE41C5126B300F078AB /* UIGestureRecognizer+YYAdd.m in Sources */ = {isa = PBXBuildFile; fileRef = 9AB0BAE31C5126B300F078AB /* UIGestureRecognizer+YYAdd.m */; settings = {ASSET_TAGS = (); }; };
@@ -97,6 +99,9 @@
 		9A1284DC1C4D3FAA001C5C88 /* MCYContainerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MCYContainerViewController.m; path = Src/ContainerViewController/MCYContainerViewController.m; sourceTree = "<group>"; };
 		9A1284DE1C4D3FD0001C5C88 /* MCYScrollMenuView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MCYScrollMenuView.h; path = Src/ContainerViewController/MCYScrollMenuView.h; sourceTree = "<group>"; };
 		9A1284DF1C4D3FD0001C5C88 /* MCYScrollMenuView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MCYScrollMenuView.m; path = Src/ContainerViewController/MCYScrollMenuView.m; sourceTree = "<group>"; };
+		9A547A571C8095390064396F /* BackgroundViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BackgroundViewController.h; path = Src/ViewControllers/BackgroundFetch/BackgroundViewController.h; sourceTree = "<group>"; };
+		9A547A581C8095390064396F /* BackgroundViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BackgroundViewController.m; path = Src/ViewControllers/BackgroundFetch/BackgroundViewController.m; sourceTree = "<group>"; };
+		9A547A591C8095390064396F /* BackgroundViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = BackgroundViewController.xib; path = Src/ViewControllers/BackgroundFetch/BackgroundViewController.xib; sourceTree = "<group>"; };
 		9A9328D61C55C0CD006BBE19 /* UIControl+YYadd.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIControl+YYadd.h"; path = "Tools/UIControl+YYadd.h"; sourceTree = "<group>"; };
 		9A9328D71C55C0CD006BBE19 /* UIControl+YYadd.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIControl+YYadd.m"; path = "Tools/UIControl+YYadd.m"; sourceTree = "<group>"; };
 		9AB0BADF1C51254800F078AB /* YYImageExampleHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = YYImageExampleHelper.h; path = Src/ViewControllers/YYImage/YYImageExampleHelper.h; sourceTree = "<group>"; };
@@ -263,6 +268,37 @@
 			name = CotainerViewController;
 			sourceTree = "<group>";
 		};
+		9A547A541C80947B0064396F /* mainTableView */ = {
+			isa = PBXGroup;
+			children = (
+				9ADCE3741C4F9D36009D92E3 /* MainTableViewController.h */,
+				9ADCE3751C4F9D36009D92E3 /* MainTableViewController.m */,
+				9ADCE3761C4F9D36009D92E3 /* MainTableViewController.xib */,
+				9A547A561C8094DC0064396F /* BackgroundSession */,
+			);
+			name = mainTableView;
+			sourceTree = "<group>";
+		};
+		9A547A551C80948C0064396F /* mainVC */ = {
+			isa = PBXGroup;
+			children = (
+				9ADCE36F1C4F9D1C009D92E3 /* MainViewController.h */,
+				9ADCE3701C4F9D1C009D92E3 /* MainViewController.m */,
+				9ADCE3711C4F9D1C009D92E3 /* MainViewController.xib */,
+			);
+			name = mainVC;
+			sourceTree = "<group>";
+		};
+		9A547A561C8094DC0064396F /* BackgroundSession */ = {
+			isa = PBXGroup;
+			children = (
+				9A547A571C8095390064396F /* BackgroundViewController.h */,
+				9A547A581C8095390064396F /* BackgroundViewController.m */,
+				9A547A591C8095390064396F /* BackgroundViewController.xib */,
+			);
+			name = BackgroundSession;
+			sourceTree = "<group>";
+		};
 		9ADCE36B1C4F6E6C009D92E3 /* Tools */ = {
 			isa = PBXGroup;
 			children = (
@@ -280,12 +316,8 @@
 		9ADCE36E1C4F9CD3009D92E3 /* MainViewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				9ADCE36F1C4F9D1C009D92E3 /* MainViewController.h */,
-				9ADCE3701C4F9D1C009D92E3 /* MainViewController.m */,
-				9ADCE3711C4F9D1C009D92E3 /* MainViewController.xib */,
-				9ADCE3741C4F9D36009D92E3 /* MainTableViewController.h */,
-				9ADCE3751C4F9D36009D92E3 /* MainTableViewController.m */,
-				9ADCE3761C4F9D36009D92E3 /* MainTableViewController.xib */,
+				9A547A551C80948C0064396F /* mainVC */,
+				9A547A541C80947B0064396F /* mainTableView */,
 				9ADCE3811C4FAB93009D92E3 /* BaseViewController */,
 				9ADCE3881C4FD716009D92E3 /* YYImageCY */,
 			);
@@ -490,6 +522,7 @@
 				9ADCE3B51C4FDD79009D92E3 /* ResourceTwitter.bundle in Resources */,
 				9ADCE3B61C4FDD79009D92E3 /* wall-e@2x.webp in Resources */,
 				9A1284B41C4D3F2C001C5C88 /* Assets.xcassets in Resources */,
+				9A547A5B1C8095390064396F /* BackgroundViewController.xib in Resources */,
 				9ADCE3B01C4FDD79009D92E3 /* mew_interlaced.png in Resources */,
 				9ADCE3AE1C4FDD79009D92E3 /* mew_baseline.png in Resources */,
 				9ADCE3AC1C4FDD79009D92E3 /* mew_baseline.gif in Resources */,
@@ -574,6 +607,7 @@
 				9AE0ACCD1C57C27F009622B1 /* YYImageProgressiveExample.m in Sources */,
 				9A1284AF1C4D3F2C001C5C88 /* ViewController.m in Sources */,
 				9ADCE3841C4FABD0009D92E3 /* BaseViewController.m in Sources */,
+				9A547A5A1C8095390064396F /* BackgroundViewController.m in Sources */,
 				9ADCE3991C4FD846009D92E3 /* UIView+YYAdd.m in Sources */,
 				9ADCE3721C4F9D1C009D92E3 /* MainViewController.m in Sources */,
 				9ADCE3771C4F9D36009D92E3 /* MainTableViewController.m in Sources */,
@@ -731,7 +765,7 @@
 				INFOPLIST_FILE = MCYCotainerViewController/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = cy.MCYCotainerViewController;
+				PRODUCT_BUNDLE_IDENTIFIER = cn.com.cy.MCYCotainerViewController;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -746,7 +780,7 @@
 				INFOPLIST_FILE = MCYCotainerViewController/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = cy.MCYCotainerViewController;
+				PRODUCT_BUNDLE_IDENTIFIER = cn.com.cy.MCYCotainerViewController;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
